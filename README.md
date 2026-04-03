@@ -8,6 +8,29 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 
 ![Webscreen](/pics/IMG_20260403_173029.jpg)
 
+## Warum nur, warum?
+
+Für den Test von neu geschriebenen oder geänderten Programmen habe ich zunächst den prima Emulator von Michael Wessel verwendet. Am PC entwickelt, auf SD-Karte geschrieben, in den Emulator umgestöpselt und übertragen... Haltnextnullnullrun...
+
+Als ich dann auch mal auf dem "echten" Microtronic testen wollte, stieß ich - unter anderem - auf den Unterschied zwischen zufälligem und nicht so zufälligem Zufall. Also ergaben sich neue Notwendigkeiten:
+
+- mehr auf dem originalen Busch Microtronic 2090 testen
+- besondere Peripherie für meine Programme anschließen
+
+Daher habe ich dann einen Raspberry Pi Zero W eingesetzt. Ein Python-Skript und ein paar Kabel mit Levelshifter übernahmen die Funktion des 2095-Kassetteninterfaces, und so konnte ich meine Ideen relativ schnell und unkompliziert über WLAN auf den Pi und von dort auf den Original-2090 bringen.
+
+Für einige dieser neuen Programme wiederum benötigte ich manchmal auch Peripherie am Microtronic, die ich nicht immer mit Busch-Baukästen umsetzen konnte (oder wollte). Das erledigte zuerst ein Arduino Nano mit entsprechendem C-Programm, anschließend übernahm der Pi auch diese Aufgabe.
+
+Der Raspberry Pi (also auch der von mir verwendete Zero) ist im Prinzip ein vollwertiger Computer mit Linux-Betriebssystem. Damit konnte ich natürlich alle Peripherie-Aufgaben bequem erledigen, und der Pi wäre auch eine bestens geeignete Hardware-Grundlage für alle weiteren Vorhaben gewesen. Irgendwie störte mich aber der Gedanke, dass zwischen dem Microtronic und dem Pi ein so großes Gefälle herrschte. Ich wollte, dass sich zwei Microcontroller miteinander "auf Augenhöhe" unterhalten - wenn auch mit lächerlichen 45 Jahren Altersunterschied. 
+
+Die Leitidee sollte sein: Mit so wenig wie möglich so viel wie möglich erreichen. 
+
+Meine Wahl fiel dann auf den ESP32 - nicht zuletzt, weil ich vorher schon öfter den Vorgänger ESP8266 in der Arduino-Umgebung benutzt habe. Der erste Gedanke war dann auch, dem ESP alles, was er wissen muss, in C beizubringen, um als idealer peripherer Begleiter für den Microtronic zu dienen. Einige Iterationen später war der Gedanke dann aber: Wäre es nicht noch schöner, wenn man zur Laufzeit neue Ideen testen könnte, ohne die Firmware über die Arduino-IDE jeweils neu programmieren und flashen zu müssen? Wenn man also User-Skripte laufen lassen könnte? 
+
+C und Arduino-IDE fielen damit raus und Python rückte ins Zentrum, weil es zur Laufzeit interpretiert wird und der Microtronic sowieso kein Geschwindigkeitsmonster ist. Genauer gesagt, die Wahl fiel auf Micropython - womit die Ideen letztlich alle umsetzbar schienen. Und außerdem wollte ich mal wieder was neues lernen.
+
+Entsprechend der Leitidee _Reduce to the max_ sollte es dann der ESP32-C3-Supermini sein, da dieser zum einen nur ca. 1 Euro kostet und zum anderen genug GPIOs für alle Ein- und Ausgänge des Microtronic sowie für ein bisschen zusätzliche Funktionen bietet. 
+
 ## Schaltung
 
 Die Schaltung des ESP2090-Studios ist verhältnismäßig einfach. 
