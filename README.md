@@ -64,3 +64,15 @@ Wenn du bisher noch nie etwas mit Protokollen zu tun haben wolltest (hast du abe
 Als einfaches Beispiel für ein Protokoll dient der "Bildschirm". Um alle 8x8 Pixel der LED-Matrix anzusteuern, werden die Speicherregister 0-F des Microtronic nacheinander auf die Ausgänge gelegt - also insgesamt 16 Nibbles, 64 Bit. Damit dies zu genau festgelegten Zeiten passiert, sendet der ESP zuerst einen Request (REQ), wartet auf eine Bestätigung (ACK) und liest dann alle 9 Millisekunden die Ausgänge - denn bei deaktivierter Anzeige benötigt der 2090 ziemlich genau 9 ms für die Ausführung einer Instruktion.
 
 Auf diese Weise können auch andere Protokolle zum Datenaustausch zwischen Microtronic und ESP32 realisiert werden. 
+
+## Beispiele
+
+### Berlin-Uhr
+
+Der Uhrmacher und Elektroingenieur Dieter Binninger hat 1975 die erste Uhr der Welt, die die Zeit mit leuchtenden farbigen Feldern anzeigt, mitten auf dem Kurfürstendamm in Berlin aufstellen lassen. Viele kannten diese Uhr unter dem Namen _Mengenlehre-Uhr_, obwohl sie mit der damals im Schulunterricht noch sehr kritisch gesehenen Mengenlehre gar nichts zu tun hat. Und die wenigsten haben verstanden, wie man auf dieser Uhr die Zeit ablesen soll. Trotzdem ist sie ein Wahrzeichen von Berlin (gewesen). Auch heute noch ist sie zu bestaunen, wenn auch an einem deutlich weniger prominenten Standort.
+
+Es gab in den Berliner Souvenirläden auch ein Tischmodell dieser Uhr zu kaufen - und darin arbeitet ein TMS1000 von Texas Instruments. Welcher Chip in der Original-Uhr arbeitet, ist mir leider nicht bekannt. Aber 1975 war die Auswahl an Microcontrollern gar nicht so groß, also darf spekuliert werden... In jedem Fall schließt sich hier der Kreis, da der größere Bruder TMS1600 im Microtronic immer noch zuverlässig seine Dienste verrichtet.
+
+![Berlinuhr](/pics/IMG_20260403_221740.jpg)
+
+Der Microtronic kann jetzt auch Berlin-Uhr! Wer kann die richtige Uhrzeit erkennen? 
