@@ -35,7 +35,7 @@ Entsprechend der Leitidee _Reduce to the max_ sollte es dann der ESP32-C3-Superm
 
 ## Schaltung
 
-Die Schaltung des ESP2090-Studios ist verhältnismäßig einfach. 
+Die [Schaltung des ESP2090-Studios](https://github.com/rab-berlin/ESP2090/blob/main/documents/ESP2090.pdf) ist verhältnismäßig einfach. 
 
 Der ESP32 arbeitet mit 3,3 Volt Betriebsspannung, der Microtronic hingegen mit 5 Volt (genauer gesagt: sogar 5,7 Volt - nachmessen!). Daher sind in den Signalwegen jeweils Levelshifter eingebaut. Da wir es mit verhältnismäßig langsamen Signalen im Bereich von Millisekunden zu tun haben, muss man über die Schaltgeschwindigkeit der Levelshifter nicht besonders intensiv nachdenken. Billige Teile aus China funktionieren gut.
 
