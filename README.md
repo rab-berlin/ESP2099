@@ -67,11 +67,11 @@ Auf diese Weise können auch andere Protokolle zum Datenaustausch zwischen Micro
 
 ## Beispiele
 
-### Berlin-Uhr
+### [Berlin-Uhr](https://de.wikipedia.org/wiki/Berlin-Uhr)
 
-Der Uhrmacher und Elektroingenieur Dieter Binninger hat 1975 die erste Uhr der Welt, die die Zeit mit leuchtenden farbigen Feldern anzeigt, mitten auf dem Kurfürstendamm in Berlin aufstellen lassen. Viele kannten diese Uhr unter dem Namen _Mengenlehre-Uhr_, obwohl sie mit der damals im Schulunterricht noch sehr kritisch gesehenen Mengenlehre gar nichts zu tun hat. Und die wenigsten haben verstanden, wie man auf dieser Uhr die Zeit ablesen soll. Trotzdem ist sie ein Wahrzeichen von Berlin (gewesen). Auch heute noch ist sie zu bestaunen, wenn auch an einem deutlich weniger prominenten Standort.
+Der Uhrmacher und Elektroingenieur [Dieter Binninger](https://de.wikipedia.org/wiki/Dieter_Binninger) hat 1975 die erste Uhr der Welt, die die Zeit mit leuchtenden farbigen Feldern anzeigt, mitten auf dem Kurfürstendamm in Berlin aufstellen lassen. Viele kannten diese Uhr unter dem Namen _Mengenlehre-Uhr_, obwohl sie mit der damals im Schulunterricht noch sehr kritisch gesehenen Mengenlehre gar nichts zu tun hat. Und die wenigsten haben verstanden, wie man auf dieser Uhr die Zeit ablesen soll. Trotzdem ist sie ein Wahrzeichen (gewesen). Auch heute noch ist die [Berlin-Uhr](https://de.wikipedia.org/wiki/Berlin-Uhr) zu bestaunen, wenn auch an einem deutlich weniger prominenten Standort.
 
-Es gab in den Berliner Souvenirläden auch ein Tischmodell dieser Uhr zu kaufen - und darin arbeitet ein TMS1000 von Texas Instruments. Welcher Chip in der Original-Uhr arbeitet, ist mir leider nicht bekannt. Aber 1975 war die Auswahl an Microcontrollern gar nicht so groß, also darf spekuliert werden... In jedem Fall schließt sich hier der Kreis, da der größere Bruder TMS1600 im Microtronic immer noch zuverlässig seine Dienste verrichtet.
+Es gab in den Berliner Souvenirläden auch ein Tischmodell dieser Uhr zu kaufen - und darin arbeitet ein [TMS1000](https://de.wikipedia.org/wiki/Texas_Instruments_TMS1000) von Texas Instruments. Welcher Chip in der Original-Uhr arbeitet, ist mir leider nicht bekannt. Aber 1975 war die Auswahl an Microcontrollern gar nicht so groß, also darf spekuliert werden... In jedem Fall schließt sich hier der Kreis, da der größere Bruder TMS1600 im Microtronic immer noch zuverlässig seine Dienste verrichtet.
 
 ![Berlinuhr](/pics/IMG_20260403_221740.jpg)
 
