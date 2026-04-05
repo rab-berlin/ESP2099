@@ -1,11 +1,11 @@
 Die _"Firmware"_ für das ESP2090-Studio besteht aus:
 - [MicroPython](https://micropython.org/download/ESP32_GENERIC_C3), installiert auf dem ESP32-C3
 - einigen Python-Skripten, im einzelnen
-  - main.py für die eigentliche Funktionalität des ESP2090-Studios
-  - boot.py für GPIO-Initialisierung und Verbindung mit WLAN
-  - basicweb.py für einen eigenen AP, falls keine WLAN-Verbindung möglich ist
-  - microdot.py als Bibliothek für einen schlanken und effizienten Webserver
-- der HTML-Webseite index.html
+  - [main.py](https://github.com/rab-berlin/ESP2090/blob/main/firmware/main.py) für die eigentliche Funktionalität des ESP2090-Studios
+  - [boot.py](https://github.com/rab-berlin/ESP2090/blob/main/firmware/boot.py) für GPIO-Initialisierung und Verbindung mit WLAN
+  - [basicweb.py](https://github.com/rab-berlin/ESP2090/blob/main/firmware/basicweb.py) für einen eigenen AP, falls keine WLAN-Verbindung möglich ist
+  - [microdot.py](https://github.com/rab-berlin/ESP2090/blob/main/firmware/microdot.py) als Bibliothek für einen schlanken und effizienten Webserver
+- der HTML-Webseite [index.html](https://github.com/rab-berlin/ESP2090/blob/main/firmware/index.html)
 
 Später werden noch folgende Dateien erzeugt:
 - wifi.json für die WLAN-Credentials
