@@ -95,8 +95,8 @@ Frame      DIN REQ-ACK-CLEAR           Auf REQ warten
            ...                         .
            DOT rF                      .
            EXRL                        Speicherregister 0-7 wieder zurück
-           MOVI #0,REQ-ACK-CLEAR	
-           DOT REQ-ACK-CLEAR           Null auf Ausgänge legen
+           MOVI #0,REQ-ACK-CLEAR       Null auf Ausgänge legen
+           DOT REQ-ACK-CLEAR           .
            RET	
 ```
 
