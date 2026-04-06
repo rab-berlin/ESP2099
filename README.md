@@ -100,7 +100,7 @@ Frame      DIN REQ-ACK-CLEAR           Auf REQ warten
            RET	
 ```
 
-Standard ist übrigens, dass alle LEDs nur rot leuchten. Wenn gewünscht, kann man dem ESP2090-Studio über ein User-Skript vorher mitteilen, welche Farbe jede einzelne LED der Matrix annehmen soll, wenn sie eingeschaltet wird. 
+Standard ist übrigens, dass alle LEDs nur rot leuchten. Man kann dem ESP2090-Studio über ein User-Skript [farbmatrix.py](https://github.com/rab-berlin/ESP2090/blob/main/program/berlinuhr/farbmatrix.py) allerdings vorher mitteilen, welche Farbe jede einzelne LED der Matrix annehmen soll, wenn sie eingeschaltet wird. Dann wird's schön bunt.
 
 Im Hauptprogramm wird die Zeit mit TIME aktualisiert, dementsprechend die einzelnen Speicherregister mit Werten gefüllt und schließlich das Unterprogramm aufgerufen, um den Frame zu übermitteln. 
 
