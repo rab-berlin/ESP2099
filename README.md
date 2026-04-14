@@ -8,6 +8,31 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 
 ![Webscreen](/pics/IMG_20260403_173029.jpg)
 
+
+## Materialliste (BOM)
+
+- 1x ESP32-C3 SuperMini
+- 1x 74HCT244 8-fach Treiber
+- 1x CD4071 4-fach Oder-Gatter
+- 2x 4ch-2way-Levelshifter (Bauform beachten)
+- 1x Buzzer, passiv
+- 4x Widerstand 470 Ohm
+- 4x Widerstand 10k Ohm
+- 1x Widerstand 220 Ohm
+- 1x Widerstand 100 Ohm
+- 2x Kondensator 100 nF
+- 1x Stiftleiste 2,54 mm
+- 1x Buchsenleiste 2,54 mm (für ESP32, wenn gewünscht)
+- 1x IC-Sockel 14-polig (für CD4071, wenn gewünscht)
+- 1x IC-Sockel 20-polig (für 74HCT244, wenn gewünscht)
+- 18x Metallösen 2,5 mm Innendurchmesser
+- 1x Platine (PCB)
+- 1x WS2812B-LED-Matrix 8x8
+
+Wenn man das alles bei AliExpress bestellt, kommt man für unter 20 Euro weg - und hat danach noch viele Ersatzteile übrig :) 
+
+Wer es richtig schön will, druckt sich noch einen passenden Busch-Bauteilträger dazu aus. Daran arbeite ich noch...
+
 ## Warum nur, warum?
 
 Für den Test von neu geschriebenen oder geänderten Programmen habe ich zunächst den prima [Emulator von Michael Wessel](https://github.com/lambdamikel/Busch-2090) verwendet. Am PC entwickelt, auf SD-Karte geschrieben, in den Emulator umgestöpselt und übertragen... Haltnextnullnullrun...
