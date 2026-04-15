@@ -137,6 +137,6 @@ Wer's ohne ESP2090-Studio prinzipiell mal testen will, muss einen Taster korrekt
 
 ...
 
-### [Game of Life](https://de.wikipedia.org/wiki/Conways_Spiel_des_Lebens)
+### [Game of Life](https://github.com/rab-berlin/Life2090)
 
 ...
