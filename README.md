@@ -1,6 +1,6 @@
 # Bring deinen Busch Microtronic 2090 ins 21. Jahrhundert!
 
-![Prototyp](/pics/IMG_20260410_195403.jpg)
+![ESP2099-Studio](/pics/IMG_20260417_185934~2.jpg)
 
 Wir schließen an die Ein- und Ausgänge des Microtronic 2090 einen [ESP32](https://de.wikipedia.org/wiki/ESP32) an, auf dem [MicroPython](https://micropython.org) läuft. Dadurch können wir beliebige Python-Programme laufen lassen, die mit dem 2090 kommunizieren. 
 
