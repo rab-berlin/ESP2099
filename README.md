@@ -11,23 +11,25 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 
 ## Materialliste (BOM)
 
-- 1x ESP32-C3 SuperMini
-- 1x 74HCT244 8-fach Treiber
-- 1x CD4071 4-fach Oder-Gatter
-- 2x 4ch-2way-Levelshifter (Bauform beachten)
-- 1x Buzzer, passiv
-- 4x Widerstand 470 Ohm
-- 4x Widerstand 10k Ohm
-- 1x Widerstand 220 Ohm
-- 1x Widerstand 100 Ohm
-- 2x Kondensator 100 nF
-- 1x Stiftleiste 2,54 mm
-- 1x Buchsenleiste 2,54 mm (für ESP32, wenn gewünscht)
-- 1x IC-Sockel 14-polig (für CD4071, wenn gewünscht)
-- 1x IC-Sockel 20-polig (für 74HCT244, wenn gewünscht)
-- 18x Metallösen 2,5 mm Innendurchmesser
-- 1x Platine (PCB)
-- 1x WS2812B-LED-Matrix 8x8
+| Menge | Artikel | Preis (Ali 2026) | Bemerkung |
+| ---: | :--- | ---: | :--- |
+| 1 | ESP32-C3 SuperMini | 2,09 | |
+| 1 | SN74HCT244 8-fach Treiber | 2,00 | (für 10 Stück) |
+| 1 | CD4071 4-fach Oder-Gatter | 2,00 | (für 10 Stück) |
+| 2 | 4ch-2way-Levelshifter | 1,50 | (für 10 Stück, Bauform beachten) |
+| 1 | Buzzer, passiv | 1,50 | (für 10 Stück) |
+| 4 | Widerstand 470 Ohm | 1,00 | (für Sortiment Widerstände) |
+| 4 | Widerstand 10k Ohm | - | (s.o.) |
+| 1 | Widerstand 220 Ohm | - | (s.o.) |
+| 1 | Widerstand 100 Ohm | - | (s.o.) |
+| 2 | Kondensator 100 nF | 1,00 | (für Sortiment Kondensatoren) |
+| 1 | Stiftleiste 2,54 mm | | |
+| 1 | Buchsenleiste 2,54 mm | | (für ESP32, wenn gewünscht) |
+| 1 | IC-Sockel 14-polig | | (für CD4071, wenn gewünscht)
+| 1 | IC-Sockel 20-polig | | (für 74HCT244, wenn gewünscht) |
+| 18 | Metallösen 2,5 mm Innendurchmesser | | |
+| 1 | Platine (PCB) | | |
+| 1 | WS2812B-LED-Matrix 8x8 | 1,80 | |
 
 Wenn man das alles bei AliExpress bestellt, kommt man für unter 20 Euro weg - und hat danach noch viele Ersatzteile übrig :) 
 
@@ -56,15 +58,15 @@ Meine Wahl fiel dann auf den ESP32 - nicht zuletzt, weil ich vorher schon öfter
 
 C und Arduino-IDE fielen damit raus. Python rückte ins Zentrum, weil es zur Laufzeit interpretiert wird, und der Microtronic sowieso kein Geschwindigkeitsmonster ist. Genauer gesagt, die Wahl fiel auf MicroPython - womit die Ideen letztlich alle umsetzbar schienen. Und außerdem wollte ich mal wieder was neues lernen.
 
-Entsprechend der Leitidee _Reduce to the max_ sollte es dann der ESP32-C3-Supermini sein, da dieser zum einen nur ca. 1 Euro kostet und zum anderen genug GPIOs für alle Ein- und Ausgänge des Microtronic sowie für ein bisschen zusätzliche Funktionen bietet. 
+Entsprechend der Leitidee _Reduce to the max_ sollte es dann der ESP32-C3-Supermini sein, da dieser zum einen nur ca. 2 Euro kostet und zum anderen genug GPIOs für alle Ein- und Ausgänge des Microtronic sowie für ein bisschen zusätzliche Funktionen bietet. 
 
 ## Schaltung
 
-Die [Schaltung des ESP2099-Studios](https://github.com/rab-berlin/ESP2090/blob/main/documents/ESP2090.pdf) ist verhältnismäßig einfach. 
+Die [Schaltung des ESP2090-Studios](https://github.com/rab-berlin/ESP2090/blob/main/documents/ESP2090.pdf) ist verhältnismäßig einfach. 
 
 Der ESP32 arbeitet mit 3,3 Volt Betriebsspannung, der Microtronic hingegen mit 5 Volt (genauer gesagt: sogar 5,7 Volt - nachmessen!). Daher sind in den Signalwegen jeweils Levelshifter eingebaut. Da wir es mit verhältnismäßig langsamen Signalen im Bereich von Millisekunden zu tun haben, muss man über die Schaltgeschwindigkeit der Levelshifter nicht besonders intensiv nachdenken. Billige Teile aus China funktionieren gut.
 
-Ich habe darauf geachtet, dass die Ein- und Ausgänge des Microtronic elektrisch vom ESP entkoppelt sind, das heißt, sie sollten auch bei gleichzeitigem Anschluss des ESP2099-Studios nach wie vor nutzbar bleiben, falls z.B. weitere Peripherie aus dem Busch-Sortiment verwendet wird.
+Ich habe darauf geachtet, dass die Ein- und Ausgänge des Microtronic elektrisch vom ESP entkoppelt sind, das heißt, sie sollten auch bei gleichzeitigem Anschluss des ESP2090-Studios nach wie vor nutzbar bleiben, falls z.B. weitere Peripherie aus dem Busch-Sortiment verwendet wird.
 
 ### Eingänge
 
@@ -72,13 +74,13 @@ Die Eingänge des Microtronic sind an je einen Ausgang eines ODER-Gatters (CD407
 
 ### Ausgänge 
 
-Die Ausgänge des Microtronic sind an je zwei Eingänge eines 74HCT244 angeschlossen. Dadurch wird ein Microtronic-Ausgang praktisch "verdoppelt" - ein Ausgang bleibt unabhängig nutzbar, kann also beliebige Peripherie ansteuern. Der andere Ausgang ist mit einem GPIO verbunden, sodass der ESP32 alle Veränderungen an den Ausgängen überwachen kann, ohne eventuell angeschlossene weitere Peripherie elektrisch zu stören. Es ist zu beachten, dass der 74HCT244 maximal 20 mA an seinen Ausgängen liefert - mehr sollte auch der Microtronic niemals geliefert haben, wenn man seine Ausgänge nicht überlasten wollte. Für die Ansteuerung eines Transistors ist das vollkommen ausreichend.
+Die Ausgänge des Microtronic sind an je zwei Eingänge eines 74HCT244 angeschlossen. Dadurch wird ein Microtronic-Ausgang praktisch "verdoppelt" - ein Ausgang bleibt unabhängig nutzbar, kann also beliebige Peripherie ansteuern. Der andere Ausgang ist mit einem GPIO verbunden, sodass der ESP32 alle Veränderungen an den Ausgängen überwachen kann, ohne eventuell angeschlossene weitere Peripherie elektrisch zu stören. Es ist zu beachten, dass der 74HCT244 maximal 20 mA an seinen Ausgängen liefert. Mehr sollte man auch dem Microtronic niemals abverlangen, wenn man seine Ausgänge nicht überlasten will - laut Anleitungsbuch 2. Teil, S. 41: "maximal 15 mA". Für die Ansteuerung eines Transistors ist das vollkommen ausreichend.
 
 ## Was kann ich damit machen?
 
 Die einfache Antwort: alles. 
 
-Prinzipiell brauchst du nur ein passendes Python-Script auf dem ESP2099, welches auf die Signale an den vier Ausgängen des Microtronic passend reagiert und - falls nötig - die richtigen Signale zur gewünschten Zeit an die Eingänge des Microtronic sendet. 
+Prinzipiell brauchst du nur ein passendes Python-Script auf dem ESP2090, welches auf die Signale an den vier Ausgängen des Microtronic passend reagiert und - falls nötig - die richtigen Signale zur gewünschten Zeit an die Eingänge des Microtronic sendet. 
 
 Die ernüchternde Antwort: natürlich nicht alles, weil der Programmspeicher des Microtronic eben doch nur 256 Befehle umfasst. Und die Anzahl der Register mit 16 (plus 16 Speicherregister) auch recht begrenzt ist.
 
@@ -125,13 +127,13 @@ Frame      DIN REQ-ACK-CLEAR           Auf REQ warten
            RET	
 ```
 
-Standard ist übrigens, dass alle LEDs nur rot leuchten. Man kann dem ESP2099-Studio über ein User-Skript [farbmatrix.py](https://github.com/rab-berlin/ESP2090/blob/main/program/berlinuhr/farbmatrix.py) allerdings vorher mitteilen, welche Farbe jede einzelne LED der Matrix annehmen soll, wenn sie eingeschaltet wird. Dann wird's schön bunt.
+Standard ist übrigens, dass alle LEDs nur rot leuchten. Man kann dem ESP2090-Studio über ein User-Skript [farbmatrix.py](https://github.com/rab-berlin/ESP2090/blob/main/program/berlinuhr/farbmatrix.py) allerdings vorher mitteilen, welche Farbe jede einzelne LED der Matrix annehmen soll, wenn sie eingeschaltet wird. Dann wird's schön bunt.
 
 Im Hauptprogramm wird die Zeit mit TIME aktualisiert, dementsprechend die einzelnen Speicherregister mit Werten gefüllt und schließlich das Unterprogramm aufgerufen, um den Frame zu übermitteln. 
 
-Ohne ESP2099-Studio und LED-Matrix wirkt das Programm allerdings (optisch) wenig anprechend: Das Display wird abgeschaltet und danach passiert nix mehr, weil der Microtronic genauso verzweifelt wie vergeblich auf das REQ-Signal wartet. 
+Ohne ESP2090-Studio und LED-Matrix wirkt das Programm allerdings (optisch) wenig anprechend: Das Display wird abgeschaltet und danach passiert nix mehr, weil der Microtronic genauso verzweifelt wie vergeblich auf das REQ-Signal wartet. 
 
-Wer's ohne ESP2099-Studio prinzipiell mal testen will, muss einen Taster korrekt am Eingang 1 anschließen und kann dann verfolgen, wie der Microtronic bei jedem Tastendruck einen Frame über die Ausgänge sendet.
+Wer's ohne ESP2090-Studio prinzipiell mal testen will, muss einen Taster korrekt am Eingang 1 anschließen und kann dann verfolgen, wie der Microtronic bei jedem Tastendruck einen Frame über die Ausgänge sendet.
 
 ### Microtronic goes Hollywood
 
