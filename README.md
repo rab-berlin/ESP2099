@@ -11,7 +11,7 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 
 ## Materialliste (BOM)
 
-| Menge | Artikel | Preis<br>Ali 04/26 | Bemerkung |
+| Menge | Artikel | Preis (04/26) | Bemerkung |
 | ---: | :--- | ---: | :--- |
 | 1 | ESP32-C3 SuperMini | 1,70 | |
 | 1 | SN74HCT244 8-fach Treiber | 2,60 | (10 St.) |
@@ -32,7 +32,7 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 | 1 | WS2812B-LED-Matrix 8x8 | 1,80 | |
 | 1 | Netzteil 5V 3A USB-C | 3,30 | |
 
-Wenn man das alles frisch bei AliExpress ordert, kommt man ohne Platine für etwa 20 Euro weg - und hat danach noch viele Ersatzteile übrig. Ich bin aber sicher, dass du das meiste sowieso schon vorrätig hast. Lediglich den ESP, die Metallösen, die Platine und wahrscheinlich die LED-Matrix musst du wohl bestellen.
+Die Preise sind von AliExpress. Wer das alles frisch ordert, kommt ohne Platine für etwa 20 Euro weg - und hat danach noch viele Ersatzteile übrig. Ich bin aber sicher, dass du das meiste sowieso schon vorrätig hast. Lediglich den ESP, die Metallösen, die Platine und wahrscheinlich die LED-Matrix musst du wohl bestellen.
 
 Du kannst natürlich auch ohne IC-Sockel und Buchsenleisten alles direkt auf die Platine löten. Ich persönlich hab´s aber lieber flexibel - versuch mal, einen falsch eingelöteten oder nicht funktionierenden IC wieder auszulöten...
 
