@@ -1,12 +1,12 @@
 # Bring deinen Busch Microtronic 2090 ins 21. Jahrhundert!
 
-![ESP2090-Studio](/pics/IMG_20260417_185934~2.jpg)
+![ESP2090-Studio](/pics/ESP2090_Baustein_oben.jpg)
 
 Wir schließen an die Ein- und Ausgänge des Microtronic 2090 einen [ESP32](https://de.wikipedia.org/wiki/ESP32) an, auf dem [MicroPython](https://micropython.org) läuft. Dadurch können wir beliebige Python-Programme laufen lassen, die mit dem 2090 kommunizieren. 
 
 Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emulator, Tongenerator, beliebige Sensoren, Internet-Anbindung bis hin zu einem 8x8-Matrix-LED-"Bildschirm" für den Microtronic - über die Weboberfläche lässt sich alles konfigurieren und steuern. 
 
-![Webscreen](/pics/IMG_20260403_173029.jpg)
+![Webscreen](/pics/ESP2090_Desktop.jpg)
 
 
 ## Materialliste (BOM)
@@ -106,7 +106,7 @@ Der Uhrmacher und Elektroingenieur [Dieter Binninger](https://de.wikipedia.org/w
 
 Es gab in den Berliner Souvenirläden auch ein Tischmodell dieser Uhr zu kaufen - und darin arbeitet ein [TMS1000](https://de.wikipedia.org/wiki/Texas_Instruments_TMS1000) von Texas Instruments. Welcher Chip in der Original-Uhr arbeitet, ist mir leider nicht bekannt. Aber 1975 war die Auswahl an Microcontrollern gar nicht so groß, also darf spekuliert werden... In jedem Fall schließt sich hier der Kreis, da der größere Bruder TMS1600 im Microtronic immer noch zuverlässig seine Dienste verrichtet.
 
-![Berlinuhr](/pics/IMG_20260403_221740.jpg)
+![Berlinuhr](/pics/ESP2090_Berlinuhr.jpg)
 
 Der Microtronic kann jetzt auch Berlin-Uhr! Wer kann die richtige Uhrzeit erkennen? 
 
