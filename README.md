@@ -28,13 +28,13 @@ Vom einfachen Blinklicht über anpassbaren Zufallszahlengenerator, 2095-Tape-Emu
 | 1 | IC-Sockel 14-polig | 2,20 | (Sortiment 66 St., für CD4071)
 | 1 | IC-Sockel 20-polig | - | (s.o., für 74HCT244) |
 | 18 | Metallösen 2,5 mm Innendurchmesser | 1,80 | (Sortiment 100 St., Stichwort: rivet, eyelet) |
-| 1 | Platine (PCB) | 9,00 | (5 St. aus Fernost - alternativ von mir, falls noch da) |
+| 1 | Platine (PCB) | 9,00 | (5 St. aus Fernost - oder von mir, falls noch da) |
 | 1 | WS2812B-LED-Matrix 8x8 | 1,80 | |
 | 1 | Netzteil 5V 3A USB-C | 3,30 | |
 
-Wenn man das alles bei AliExpress bestellt, kommt man für unter 20 Euro weg - und hat danach noch viele Ersatzteile übrig :) 
+Wenn man das alles frisch bei AliExpress ordert, kommt man ohne Platine für etwa 20 Euro weg - und hat danach noch viele Ersatzteile übrig. Ich bin aber sicher, dass du das meiste sowieso schon vorrätig hast. Lediglich den ESP, die Metallösen, die Platine und wahrscheinlich die LED-Matrix musst du wohl bestellen.
 
-Du kannst natürlich ohne Sockel und Buchsenleiste alles direkt auf die Platine löten. Ich persönlich hab´s aber lieber flexibel - versuch mal, einen falsch eingelöteten oder nicht funktionierenden IC wieder auszulöten...
+Du kannst natürlich auch ohne IC-Sockel und Buchsenleisten alles direkt auf die Platine löten. Ich persönlich hab´s aber lieber flexibel - versuch mal, einen falsch eingelöteten oder nicht funktionierenden IC wieder auszulöten...
 
 Wer es richtig schön will, druckt sich noch einen passenden Busch-Bauteilträger dazu aus. ~~Daran arbeite ich noch...~~ SCAD- und STL-Datei. Zur Befestigung der Platine am Träger brauchst du vier winzige Schrauben M2 und passende Muttern.
 
